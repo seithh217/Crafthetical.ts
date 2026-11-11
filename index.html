@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Memory Keepsake ✦</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Patrick+Hand&family=Special+Elite&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Handwritten & Sentimental Typography */
+    .font-handwriting {
+      font-family: 'Caveat', cursive;
+    }
+    .font-doodle {
+      font-family: 'Patrick Hand', cursive;
+    }
+    .font-typewriter {
+      font-family: 'Special Elite', cursive;
+    }
+
+    /* Textured Scrapbook Paper Background */
+    body {
+      font-family: 'Patrick Hand', cursive;
+      background-color: #f7f1e5;
+      background-image: 
+        radial-gradient(#e2d3be 1.5px, transparent 0),
+        radial-gradient(#e2d3be 1.5px, #f7f1e5 0);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+      color: #3d312a;
+    }
+
+    /* Washi Tape Accent */
+    .washi-tape {
+      background: rgba(232, 212, 185, 0.75);
+      border-left: 2px dashed rgba(160, 135, 105, 0.4);
+      border-right: 2px dashed rgba(160, 135, 105, 0.4);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transform: rotate(-2deg);
+    }
+
+    .washi-tape-right {
+      background: rgba(220, 195, 195, 0.75);
+      border-left: 2px dashed rgba(170, 120, 120, 0.4);
+      border-right: 2px dashed rgba(170, 120, 120, 0.4);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transform: rotate(3deg);
+    }
+
+    /* Polaroid Photo Frame Styling */
+    .polaroid-frame {
+      background: #fdfbf7;
+      box-shadow: 
+        0 12px 25px -8px rgba(61, 49, 42, 0.25),
+        0 2px 6px rgba(0,0,0,0.05),
+        inset 0 0 15px rgba(0,0,0,0.02);
+      border: 1px solid #ebdccb;
+      transform: rotate(-0.8deg);
+      transition: transform 0.3s ease;
+    }
+
+    .polaroid-frame:hover {
+      transform: rotate(0deg) scale(1.01);
+    }
+
+    /* Doodled Border Box */
+    .doodle-box {
+      border: 2px dashed #ab947a;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    }
+
+    /* Custom Cassette Audio Slider */
+    input[type=range] {
+      accent-color: #9c7356;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-3 sm:p-6 select-none">
+
+  <!-- Floating SVG Doodles (Background Accents) -->
+  <div class="fixed top-6 left-6 text-[#c4b097] opacity-60 pointer-events-none select-none rotate-12">
+    <svg width="45" height="45" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+      <path d="M50,15 L60,38 L85,40 L66,56 L72,80 L50,67 L28,80 L34,56 L15,40 L40,38 Z" />
+    </svg>
+  </div>
+  <div class="fixed bottom-10 right-8 text-[#d9a8a8] opacity-60 pointer-events-none select-none -rotate-12">
+    <svg width="50" height="50" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+      <path d="M50,30 C35,10 10,25 10,45 C10,65 50,90 50,90 C50,90 90,65 90,45 C90,25 65,10 50,30 Z" />
+    </svg>
+  </div>
+
+  <!-- Main Scrapbook Container -->
+  <main class="max-w-xl mx-auto w-full my-auto relative">
+    
+    <!-- Top Washi Tape Strip -->
+    <div class="washi-tape absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-7 z-20 flex items-center justify-center">
+      <span class="font-doodle text-xs text-[#6e5845] tracking-wider">memory #01</span>
+    </div>
+
+    <!-- Main Card -->
+    <div class="bg-[#fdf9f3] p-6 sm:p-9 rounded-2xl shadow-xl border-2 border-[#e6d7c3] relative overflow-hidden">
+      
+      <!-- Hand-drawn Header Section -->
+      <header class="text-center mb-6 pt-2">
+        <h2 class="font-doodle text-base sm:text-lg text-[#9c7356] tracking-widest uppercase">✦ A Special Creation ✦</h2>
+        <h1 class="font-handwriting text-4xl sm:text-5xl font-bold text-[#4a3a2f] my-1 tracking-wide" id="title-text">
+          Made Just for You
+        </h1>
+        
+        <!-- Handwritten Date Badge -->
+        <div class="inline-block relative mt-1">
+          <span class="font-handwriting text-2xl sm:text-3xl text-[#b56b5d] underline decoration-wavy decoration-[#e0a89d]">
+            November 11 2026
+
+          <!-- Tiny Doodle Sparkle -->
+          <span class="absolute -top-2 -right-5 text-[#caa368] text-sm">✨</span>
+        </div>
+      </header>
+
+      <!-- Center Video Section (Polaroid Frame) -->
+      <section class="mb-7 relative">
+        <!-- Top Left Corner Tape -->
+        <div class="washi-tape-right absolute -top-3 -left-3 w-20 h-6 z-10"></div>
+        
+        <div class="polaroid-frame p-3 sm:p-4 rounded-sm">
+          <!-- Video Container -->
+          <div class="bg-[#241e1a] rounded overflow-hidden aspect-[4/3] relative flex items-center justify-center group shadow-inner">
+            <video id="timelapse-video" class="w-full h-full object-cover" controls playsinline poster="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80">
+              <source src="video_20261111_000322_edit.mp4" type="video/mp4".mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+          <!-- Polaroid Caption -->
+          <div class="pt-3 pb-1 text-center">
+            <p class="font-handwriting text-2xl text-[#5c4a3e]">drawing process timelapse ✎...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Voice Note Section (Cozy Tape Player Widget) -->
+      <section class="bg-[#f4ebd9] p-4 sm:p-5 rounded-xl border border-[#ded0b8] relative shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center space-x-2">
+            <span class="text-lg">🎙️</span>
+            <span class="font-handwriting text-2xl font-bold text-[#4a3a2f]">A note from a little someone </span>
+          </div>
+          <span id="audio-time" class="font-typewriter text-xs text-[#7d6856]">0:00 / 0:00</span>
+        </div>
+
+        <audio controls><source src="quote.mp3" type="audio/mpeg"></audio>      
+
+<!-- Spotify Code with Scan Text -->
+<div class="flex flex-col items-center justify-center my-4 space-y-2">
+  <img src="spotify-code.jpg" alt="Spotify Code" class="w-48 rounded-lg shadow-sm" />
+  <p class="font-handwriting text-sm text-gray-600">✨ Scan me! ✨</p>
+</div>
+             
+  <!-- Footer -->
+  <footer class="text-center py-3 mt-4">
+    <p class="font-handwriting text-xl text-[#7d6856]">
+      Created with love & art ✦ Keep this memory forever
+    </p>
+  </footer>
+
+  <!-- Audio & File Preview Logic -->
+  <script>
+    const audio = document.getElementById('voice-note');
+    const playBtn = document.getElementById('play-btn');
+    const playIcon = document.getElementById('play-icon');
+    const pauseIcon = document.getElementById('pause-icon');
+    const slider = document.getElementById('audio-slider');
+    const timeDisplay = document.getElementById('audio-time');
+    const video = document.getElementById('timelapse-video');
+
+    function toggleAudio() 
+      
+      
+      if (audio.paused) {
+        audio.play();
+        playIcon.classList.add('hidden');
+        pauseIcon.classList.remove('hidden');
+      } else {
+        audio.pause();
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+      }
+    }
+
+    audio.addEventListener('timeupdate', () => {
+      if (audio.duration) {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        slider.value = progress;
+        timeDisplay.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+      }
+    });
+
+    slider.addEventListener('input', () => {
+      if (audio.duration) {
+        audio.currentTime = (slider.value / 100) * audio.duration;
+      }
+    });
+
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    // Local File Preview Listeners
+    document.getElementById('video-file-input').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        video.src = URL.createObjectURL(file);
+        video.play();
+      }
+    });
+
+    document.getElementById('audio-file-input').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        audio.src = URL.createObjectURL(file);
+        audio.play();
+        playIcon.classList.add('hidden');
+        pauseIcon.classList.remove('hidden');
+      }
+    });
+  </script>
+  <script>
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const today = new Date().toLocaleDateString('en-US', options);
+  document.getElementById('current-date').textContent = today;
+</script>
+
+</body>
+</html>
